@@ -8,7 +8,7 @@
     <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
     <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="3" type="long" />
-    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexRemoved" />
+    <option name="/Default/Housekeeping/OptionsDialog/SelectedPageId/@EntryValue" value="CppFormatterOtherPage" type="string" />
   </component>
   <component name="CMakePresetLoader">{
   &quot;useNewFormat&quot;: true
@@ -28,7 +28,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bebd6512-56f6-48d9-b2da-221a31fa202a" name="Changes" comment="Added Dockerfile for easier local testing">
+    <list default="true" id="bebd6512-56f6-48d9-b2da-221a31fa202a" name="Changes" comment="Added project files">
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/IO/Drivers/Serial.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/IO/Drivers/Serial.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/JSON/FrameBuilder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/JSON/FrameBuilder.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/JSON/FrameParser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/JSON/FrameParser.cpp" afterDir="false" />
@@ -133,6 +135,10 @@
       <workItem from="1743771343128" duration="3000" />
       <workItem from="1743771848741" duration="3551000" />
       <workItem from="1743786323402" duration="5000" />
+      <workItem from="1743923146347" duration="282000" />
+      <workItem from="1743923437529" duration="120000" />
+      <workItem from="1743923566437" duration="460000" />
+      <workItem from="1743925629486" duration="1000" />
     </task>
     <task id="LOCAL-00001" summary="Added Dockerfile for easier local testing">
       <option name="closed" value="true" />
@@ -142,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743703879107</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added project files">
+      <option name="closed" value="true" />
+      <created>1743923271560</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1743923271560</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,8 +167,20 @@
     <isAutomaticFoundErrors value="true" />
     <isAutomaticReloadCMake value="true" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added Dockerfile for easier local testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Dockerfile for easier local testing" />
+    <MESSAGE value="Added project files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added project files" />
   </component>
 </project>

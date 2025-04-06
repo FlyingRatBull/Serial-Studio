@@ -155,8 +155,13 @@ bool IO::Drivers::Serial::configurationOk() const
  */
 quint64 IO::Drivers::Serial::write(const QByteArray &data)
 {
-  if (isWritable())
-    return port()->write(data);
+  if (isWritable()) {
+    port()->setRequestToSend(true);
+    const auto ret = port()->write(data);
+    port()->setRequestToSend(false);
+
+    return ret;
+  }
 
   return -1;
 }
@@ -201,6 +206,12 @@ bool IO::Drivers::Serial::open(const QIODevice::OpenMode mode)
       m_port = new QSerialPort(name);
     }
 
+    // Connect signals/slots
+    connect(port(), &QSerialPort::errorOccurred, this,
+            &IO::Drivers::Serial::handleError);
+    connect(port(), &QIODevice::readyRead, this,
+              &IO::Drivers::Serial::onReadyRead);
+
     // Configure serial port
     port()->setParity(parity());
     port()->setBaudRate(baudRate());
@@ -208,16 +219,12 @@ bool IO::Drivers::Serial::open(const QIODevice::OpenMode mode)
     port()->setStopBits(stopBits());
     port()->setFlowControl(flowControl());
 
-    // Connect signals/slots
-    connect(port(), &QSerialPort::errorOccurred, this,
-            &IO::Drivers::Serial::handleError);
-
     // Open device
     if (port()->open(mode))
     {
-      connect(port(), &QIODevice::readyRead, this,
-              &IO::Drivers::Serial::onReadyRead);
       port()->setDataTerminalReady(dtrEnabled());
+      port()->setRequestToSend(false);
+
       return true;
     }
 
